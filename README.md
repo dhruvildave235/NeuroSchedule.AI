@@ -1,5 +1,8 @@
 # NeuroSchedule AI
 
+![NeuroSchedule AI Banner](assets/tt.png)
+
+
 Automated, multi-agent timetable generator that produces optimized, conflict-free academic schedules in a publication-ready `Time × Days` CSV format. Built with CrewAI agents and Gemini LLM, NeuroSchedule AI automates subject allocation, enforces workload and institutional constraints, resolves faculty/room clashes, and exports clean timetables where each cell contains `Subject - Faculty - Room` or `Recess`.
 
 ---
