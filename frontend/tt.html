@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chronology Gazette | Timetable Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Sedan+SC&family=UnifrakturMaguntia&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=IM+Fell+English&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="t.css">
+  
+</head>
+<body>
+  <!-- Vintage Ink Blots -->
+  <div class="ink-blot ink-blot-1"></div>
+  <div class="ink-blot ink-blot-2"></div>
+  
+  <!-- Header -->
+  <div id="topbar">
+    <div id="timetable">TimeTable</div>
+    <div id="title">The Chronology Gazette</div>
+    <div id="about">About us</div>
+  </div>
+
+  <!-- Decorative Border -->
+  <div id="bordermania">
+    <div id="borderparent"><div id="border"></div></div>
+    <p id="btwborder">Timetable Generator</p>
+    <div id="borderparent2"><div id="border2"></div></div>
+  </div>
+
+  <!-- Main Form -->
+  <section id="sform">
+    <!-- Left Panel -->
+    <div id="left" class="panel">
+      <div class="corner-decoration corner-tl"></div>
+      <div class="corner-decoration corner-tr"></div>
+      <div class="corner-decoration corner-bl"></div>
+      <div class="corner-decoration corner-br"></div>
+      
+      <form id="studentForm" autocomplete="off">
+        <!-- Student Details -->
+        <section class="section">
+          <p class="headings">Student Details</p>
+          <div class="box">
+            <div class="row">
+              <label for="studentID">Student ID</label>
+              <input id="studentID" class="text" name="studentID" type="text" placeholder="e.g. S2025-001" required>
+            </div>
+            <div class="row">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" class="text" type="text" name="fullName" placeholder="Student full name" required>
+            </div>
+            <div class="row">
+              <label for="email">Email</label>
+              <input id="email" class="text" name="email" type="email" placeholder="name@example.com" required>
+            </div>
+          </div>
+        </section>
+
+        <!-- Program & Year -->
+        <div class="section">
+          <p class="headings">Program & Year</p>
+          <div class="box">
+            <div class="row">
+              <label for="program">Program</label>
+              <select id="program" class="text" name="program" required>
+                <option value="">--Select Program--</option>
+                <option value="bed">B.Ed. (4-Year Integrated)</option>
+                <option value="med">M.Ed. (2-Year)</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <label for="year">Year</label>
+              <select id="year" name="year" class="text" disabled required>
+                <option value="">--Select Program First--</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Credits -->
+        <div class="box compact">
+          <div class="row">
+            <p class="headings">Total Credits</p>
+            <input id="creditDisplay" class="text" type="text" name="credits" readonly value="0">
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div id="submit" class="box">
+          <button type="submit">Submit Data</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Right Panel -->
+    <div id="right" class="panel">
+      <div class="corner-decoration corner-tl"></div>
+      <div class="corner-decoration corner-tr"></div>
+      <div class="corner-decoration corner-bl"></div>
+      <div class="corner-decoration corner-br"></div>
+      
+      <!-- Compulsory Subjects -->
+      <div class="section">
+        <p class="headings">Compulsory Subjects</p>
+        <div class="box">
+          <div id="compulsoryList" class="subject-list" aria-live="polite">
+            <p class="muted">Choose program & year to view compulsory subjects.</p>
+          </div>
+        </div>
+        
+        <!-- Electives -->
+        <p class="headings">Elective Subjects</p>
+        <div class="box">
+          <div id="electiveOptions" class="elective-container" aria-live="polite">
+            <p class="muted">Electives (if any) will appear here.</p>
+          </div>
+        </div>
+        
+        <!-- Output Section -->
+        <div class="box output-box">
+          <h2 class="headings">Generate Timetable</h2>
+          <div class="output-container">
+            <p>Click below to generate your personalized timetable based on selected subjects.</p>
+          </div>
+          <div class="generate-btn-box">
+            <button onclick="generateTimetable()">Generate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen">
+    <div class="spinner"></div>
+    <p>Generating Timetable... Please wait</p>
+  </div>
+  <script src="t.js"></script>
+  
+</body>
+</html>
