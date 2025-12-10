@@ -80,7 +80,7 @@ CSV columns: `Time, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday` with
 
 ---
 
-## 🛠 Script: `generate_timetable.py` (what it does)
+## 🛠 Script 
 
 * Accepts either long or wide CSV inputs.
 * Normalizes cell contents to `Subject - Faculty - Room` (keeps `Recess` unchanged).
