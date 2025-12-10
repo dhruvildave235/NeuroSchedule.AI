@@ -19,27 +19,6 @@ Automated, multi-agent timetable generator that produces optimized, conflict-fre
 
 ---
 
-## 📁 Repository Structure (suggested)
-
-```
-neuroschedule-ai/
-├─ data/
-│  ├─ subjects.csv
-│  ├─ faculty.csv
-│  └─ classrooms.csv
-├─ scripts/
-│  ├─ generate_timetable.py      # main formatting & pivot script (CLI)
-│  ├─ crew_run.py               # optional: run CrewAI pipeline and return combined CSV
-│  └─ serve.py                  # optional: Flask upload/download UI
-├─ examples/
-│  ├─ sample_input_long.csv
-│  └─ sample_output_timetable.csv
-├─ README.md
-├─ requirements.txt
-```
-
----
-
 ## 🔧 Tech Stack
 
 * Python (Pandas)
