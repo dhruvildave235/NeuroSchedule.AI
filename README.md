@@ -164,3 +164,6 @@ Created by Dhruvil_Dave
 Built with ❤️, logic, and neural precision.
 
 
+## License
+This project is licensed under the MIT License © 2025 Dhruvil Dave
+
