@@ -158,10 +158,9 @@ crewai>=0.1
 # gemini client or openai (depending on your LLM client)
 ```
 
-## ✍️ Created By
+## ✍️ Created By Dhruvil_Dave
 
-Created by Dhruvil_Dave
-Built with ❤️, logic, and neural precision.
+ Built with ❤️, logic, and neural precision.
 
 
 ## License
